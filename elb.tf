@@ -56,7 +56,7 @@ resource "aws_security_group" "elb" {
     name = "terraform-example-elb"
 
     ingress {
-        from port = "${var.elb_port}"
+        from_port = "${var.elb_port}"
         to_port   = "${var.elb_port}"
         protocol = "tcp"
         cidr_block = ["0.0.0.0/0"]
